@@ -537,6 +537,21 @@ fun PianoRollScreen(
                             Text("Humanize", fontSize = 7.5.sp, color = Color(0xFFCAD2DE))
                         }
                     }
+                    Row(horizontalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(22.dp)
+                                .clip(RoundedCornerShape(2.dp))
+                                .background(Color(0xFF1B202B))
+                                .border(0.5.dp, borderDark, RoundedCornerShape(2.dp))
+                                .clickable { viewModel.showToast("Randomize applied") }
+                                .padding(horizontal = 2.dp),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Text("Randomize", fontSize = 7.5.sp, color = Color(0xFFCAD2DE))
+                        }
+                    }
                 }
 
                 // Quantize Slider

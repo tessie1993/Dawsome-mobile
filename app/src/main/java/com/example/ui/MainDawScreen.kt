@@ -24,6 +24,7 @@ import com.example.ui.components.AbletonTransportBar
 import com.example.ui.components.SaveProjectDialog
 import com.example.ui.screens.ArrangerScreen
 import com.example.ui.screens.PianoRollScreen
+import com.example.ui.screens.SynthWorkspaceScreen
 import com.example.ui.theme.PulseGridActive
 import com.example.ui.theme.PulseGridBg
 import com.example.ui.theme.PulseGridBorder
@@ -58,6 +59,7 @@ fun MainDawScreen(
                 ) { tab ->
                     when (tab) {
                         DawTab.PIANO_ROLL -> PianoRollScreen(viewModel = viewModel)
+                        DawTab.SYNTH -> SynthWorkspaceScreen(viewModel = viewModel)
                         else -> ArrangerScreen(viewModel = viewModel) // ArrangerScreen acts as the primary "Main" view
                     }
                 }

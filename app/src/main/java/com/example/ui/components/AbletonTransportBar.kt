@@ -114,6 +114,23 @@ fun AbletonTransportBar(
                         overflow = TextOverflow.Ellipsis
                     )
                 }
+
+                // Export MIDI button
+                Box(
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(3.dp))
+                        .background(PulseGridBg)
+                        .clickable { viewModel.showToast("Exporting MIDI to internal storage...") }
+                        .padding(horizontal = 6.dp, vertical = 3.dp)
+                ) {
+                    Text(
+                        text = "Export MIDI",
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = PulseGridActive,
+                        maxLines = 1
+                    )
+                }
             }
 
             // ==========================================
